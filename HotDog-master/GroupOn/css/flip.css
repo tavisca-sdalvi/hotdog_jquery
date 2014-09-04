@@ -1,0 +1,39 @@
+#f1_container {
+  position: relative;
+  margin: 10px auto;
+  width: 600px;
+  height: 200px;
+  z-index: 1;
+}
+#f1_container {
+  perspective: 1000;
+}
+#f1_card {
+  width: 30%;
+  height: 150%;
+  transform-style: preserve-3d;
+  transition: all 1.0s linear;
+}
+#f1_container:hover #f1_card {
+  transform: rotateY(180deg);
+  box-shadow: -5px 5px 5px #aaa;
+}
+.face {
+  position: relative;
+  width: 125%;
+  height: 100%;
+ backface-visibility: hidden;
+}
+.face.front {
+  width: 500%;
+height: 100%; 
+}
+.face.back {
+  display: block;
+  transform: rotateY(180deg);
+  box-sizing: border-box;
+  padding: 10px;
+  color: white;
+  text-align: center;
+  background-color: #aaa;
+ }
