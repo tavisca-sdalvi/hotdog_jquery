@@ -45,4 +45,11 @@ border: 1px solid transparent;
 	border-bottom-left-radius: 10px;
 }
 
+.Error
+{
+	font-size: 14px;
+	color: red;
+	font-weight: 200;
+}
+
 
