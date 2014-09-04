@@ -1,0 +1,48 @@
+#logo 
+{
+	font-family: sans-serif;
+	color: green;
+	font-weight: bold;
+	text-align: left;
+	font-size: 40px;
+}
+
+#logo a:HOVER
+{
+	color:yellow;
+	border-bottom: 2px yellow; 
+}
+
+#btn
+{
+	border-top-left-radius: 20px;
+	border-bottom-left-radius: 20px;
+}
+
+#textbox
+{
+	border-top-right-radius: 20px;
+	border-bottom-right-radius: 20px;
+}
+
+.mydiv {
+position: relative;
+min-height: 50px;
+border: 1px solid transparent;
+}
+
+.textboxstle2
+{
+	margin-left: inherit;
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+
+.textboxstle1
+{
+	margin-right: inherit;
+	border-top-left-radius: 10px;
+	border-bottom-left-radius: 10px;
+}
+
+
