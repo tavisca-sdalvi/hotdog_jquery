@@ -6,7 +6,7 @@ function loginValidation()
 var flag=true;
 
  var emailpattern=/^([a-zA-Z0-9_.-])+@([a-zA-Z0-9_.-])+\.([a-zA-Z])+([a-zA-Z])+/;
-    
+ var passwordpattern=/^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$/;   
 
  if( !emailpattern.test(email) ){
   flag=false;
@@ -16,7 +16,7 @@ var flag=true;
  	document.getElementById("email_failed").innerHTML="";
  }
 
- if(password==""){
+ if(!passwordpattern.test(password)){
   flag=false;
   document.getElementById("pswd_failed").innerHTML="Enter valid password";
  }
