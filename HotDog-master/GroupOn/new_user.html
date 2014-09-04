@@ -6,25 +6,11 @@
     <title>UserRegistration</title>
 
     <!-- Bootstrap core CSS -->
-      <link rel="stylesheet" type="text/css" href="css/responsive.css" />
+      
      <link rel="stylesheet" type="text/css" href="css/theme.css">
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Custom styles for this template -->
-    <link href="starter-template.css" rel="stylesheet">
-
-    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
-    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
-    <script src="../../assets/js/ie-emulation-modes-warning.js"></script>
-
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
-
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
+    
   </head>
 
   <body>
@@ -41,7 +27,7 @@
     <div class="form-group">
     <div class="input-group">
       <div class="input-group-addon" style="border-top-left-radius:20px;border-bottom-left-radius:20px;"><span class="glyphicon glyphicon-search"></span></div>
-      <input class="form-control" type="email" placeholder="What are you looking for?">
+      <input class="form-control" type="email" placeholder="What are you looking for?" id="looking_for">
     </div>
   </div>
   </div>
@@ -49,7 +35,7 @@
   <div class="form-group">
     <div class="input-group">
       <div class="input-group-addon"><span class="glyphicon glyphicon-map-marker"></span></div>
-      <input class="form-control"  style="border-top-right-radius:20px;border-bottom-right-radius:20px;" type="email" placeholder="Enter your location">
+      <input class="form-control"  style="border-top-right-radius:20px;border-bottom-right-radius:20px;" type="email" placeholder="Enter your location" id="location">
     </div>
     </div>
   </div>
@@ -57,7 +43,6 @@
   </div>
 
   <div class="col-md-3">
-      <a href="new_dealreg.html" style="color:white;">REGISTER DEAL</a><font style="color:white;">|</font>
     <a href="new_user.html" style="color:white;">SIGN UP</a><font style="color:white;">|</font>
     <a href="new_login.html" style="color:white;">SIGN IN</a>
   </div>
@@ -122,7 +107,7 @@
       <div class="col-sm-6 col-sm-4">
       <form class="form-signin" role="form" >
         <div>
-        <h4 class="form-signin-heading">Sign up with your facebook account</h4>
+        <h4 >Sign up with your facebook account</h4>
 <h5>Connect your Facebook account to sign up to Groupon</h5> <img src="Images/img1.png" width="120px" height="30px"></div>
 </div>
 </div>
@@ -131,24 +116,20 @@
 <div>
   
     <div class= "form-group">
-<div class="col-xl-6"><label for ="full name">Full name<input type="email" class="form-control">
-    Email <input type="email" class="form-control">
-Password <input type="password" class="form-control">
-Confirm <input type="password" class="form-control">
+<div class="col-xl-6"><label for ="full name">Full name<input type="text" class="form-control">
+    Email <input type="email" class="form-control" id="email_id">
+Password <input type="password" class="form-control" id="pswd">
+Confirm Password<input type="password" class="form-control" id="confirm_pswd">
+What was your maternal grandfather's first name?
+<input type="text" class="form-control" id="security1">
+In what city or town does your nearest sibling live?
+<input type="text" class="form-control" id="security2">
+
 
       <div class="col-sm-offset col-sm-20">
          <div class="checkbox">
             <label>
-               <input type="checkbox"> Keep me signed in on this computer
-
-            </label>
-         </div>
-      </div>
-
-      <div class="col-sm-offset col-sm-20">
-         <div class="checkbox">
-            <label>
-                   <input type="checkbox"> I agree to the Terms of Use & Privacy Statement
+                   <input type="checkbox" id="i_agree"> I agree to the Terms of Use & Privacy Statement
             </label>
          </div>
        </div>
