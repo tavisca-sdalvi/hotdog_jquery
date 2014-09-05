@@ -1,20 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    
-    
 
-    <title>DealRegistration</title>
-
-      
+    <title>login</title>  
      <link rel="stylesheet" type="text/css" href="css/theme.css">
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">  
 
-   
-  <link rel="icon" href="icon1.ico" >
+<script src="js/validation.js"></script>
+
+        
   </head>
 
   <body>
+   
 <div class="row mydiv navbar-default navbar-inverse" role="navigation">
   <div class="container">
   <div class="col-md-3">
@@ -43,6 +41,9 @@
   </div>
   </div>
 
+  <div class="col-md-3">
+      <a href="new_user.html" style="color:white;">SIGN UP</a>
+  </div>
 </div>
  </div>
 
@@ -63,6 +64,7 @@
         </div>
         <div class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
+          
             <li class="active" ><a href="#">Home</a></li>
             <li><a href="#" style="text-align: center;">Local&nbsp&nbsp</a></li>
         <li><a href="#" style="text-align: center;">Goods&nbsp&nbsp</a></li>
@@ -76,64 +78,106 @@
     </div>   </div>
               </header>
 
-
-
  
     
       </div>
     </div>
-<div class="container">
 
-                <div class="row">
-                        <div class="col-sm-2"></div>
-                    
-                
-            
-           
-          
-<div class="col-sm-8">
-<div class="panel panel-success">
-  <div class="panel-heading">ADD YOUR DEAL HERE</div>
-  <div class="panel-body">
-    <label><B><h3>Deal No:123456</h3></B></label><br>
-<label><h3>Deal Name:</h3></label><input type="text"  class="form-control" style="width:250px;">
-<label><h3>Deal Type:</h3></label><input type="text"  class="form-control" style="width:250px;">
-<label><h3>Image URL:</h3></label><input type="text"  class="form-control" style="width:250px;">
-<label><h3>Location:</h3></label><input type="text"  class="form-control" style="width:250px;">
-<label><h3>Original Price:</h3></label><input type="text"  class="form-control" style="width:250px;">
-<label><h3>Discount:</h3></label><input type="text" class="form-control" style="width:250px;">
+<div class="container">
+  <div class="row">
+<div class="container">
+  <div class="row">
+<div class="container">
+   <div class="col-xs-6 col-md-3" >
+    <a href="#" class="thumbnail" style="text-align: center;">
+      <h4>Our promise to you</h4>
+      <p>We are confident in your Groupon experience and back it with the Groupon promise</p>
+    </a>
+  </div>  
+<div class= "container">
+
+    <h3>Sign Up or Sign in</h3>
+
+<div>
+   
+  <div class="row">
+    
+<div class="container">
+<h4 class="form-signin-heading">Sign In for a Groupon account</h4>
+<div>
+ 
+    <div class= "form-group">
+      
+<div class="col-xl-6">
+
+<label for="name">    Deal name:<input type="text" id="txtEmail" class="form-control"/>
+  <div id="Deal_name_failed" class="Error"></div>
+  <br/>
+
+Deal type: <div class="btn-group" id="Deal_type">
+  <button class="btn btn-default btn-sm dropdown-toggle" type="button" data-toggle="dropdown">
+    Select One <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu" role="menu">
+    <li>Food</li>
+    <li>Resorts</li>
+    <li>Games</li>
+    <li>Health</li>
+  </ul>
+</div>
+<div id="Deal_type_failed" class="Error"></div>
+  <br/>
+
+Image:<input type="file"/> 
+  <br/>
+
+
+      <div class="col-sm-offset col-sm-20">
+         <div class="checkbox" >
+            <label>
+               <input type="checkbox" id="chk"> Keep me signed in on this computer
+            </label>
+         </div>
+      </div>
+
+  <div class="btn-group">
+    <input type="submit" class="btn btn-primary" value="Sign In"/>
+    <h6><a href="new_user.html">Not a member?</a></h6>
+
   </div>
 </div>
 
-
-
-
-
-
-
-
-
 </div>
-</div>
-
-
-
-
-
 
 </div>
 
 
 
-<div>
-<p style="text-align:center;"><a href="#" class="btn btn-success btn-lg" role"button" id="registerbtn">REGISTER DEAL</a></p>
+  <div class= "container">
+  
+       <!-- <div class="col-sm-6 col-sm-4">Sign up with your facebook account -->
+    <div class="row">
+    <!--   <div class="col-sm-6 col-md-4">-->
+   
+            <div class="col-6 col-sm-4 col-lg-4">
+        <!-- <div class="col-xs-6 col-sm-4 sidebar-offcanvas" id="sidebar" role="navigation"> -->
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
 </div>
 
-
-
-
-
-         <!-- footer starts -->
+<!-- footer starts -->
 <div class="mydiv navbar-default navbar-inverse">
 <div class="container" style="margin-top:50px">
   <div class="row">
@@ -189,5 +233,9 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+  </form>
   </body>
 </html>
+
+
+
