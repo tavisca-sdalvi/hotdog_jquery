@@ -105,7 +105,7 @@
   <div class="row">
     <div>
       <div class="col-sm-6 col-sm-4">
-      <form class="form-signin" role="form" >
+      <form class="form-signin" role="form" onsubmit="return uservalidation()" action="new_login.html">
         <div>
         <h4 >Sign up with your facebook account</h4>
 <h5>Connect your Facebook account to sign up to Groupon</h5> <img src="Images/img1.png" width="120px" height="30px"></div>
@@ -115,34 +115,42 @@
 <h4 class="form-signin-heading">Sign In for a Groupon account</h4>
 <div>
   
-    <div class= "form-group">
-<div class="col-xl-6"><label for ="full name">Full name<input type="text" class="form-control">
-    Email <input type="email" class="form-control" id="email_id">
-Password <input type="password" class="form-control" id="pswd">
-Confirm Password<input type="password" class="form-control" id="confirm_pswd">
-What was your maternal grandfather's first name?
-<input type="text" class="form-control" id="security1">
-In what city or town does your nearest sibling live?
-<input type="text" class="form-control" id="security2">
+    <div class= "form-group"> 
+  <div class="col-xl-6"><label for ="full name">Full name<input type="text" class="form-control" id="full_name"/>
+  <div id="full_name_failed" class="Error"></div><br/>
+  
+     Email <input type="email" class="form-control" id="email_id"/>
+    <div id="email_signup_failed" class="Error"></div><br/>
+    
+    Password <input type="password" class="form-control" id="pswd"/>
+    <div id="pswd_signup_failed" class="Error"></div><br/>
+
+    Confirm Password<input type="password" class="form-control" id="confirm_pswd"/>
+    <div id="cnfpswd_signup_failed" class="Error"></div><br/>
+
+    
+    What was your maternal grandfather's first name?<input type="text" class="form-control" id="security1"/>
+    <div id="security1_failed" class="Error"></div><br/>
+
+    In what city or town does your nearest sibling live?<input type="text" class="form-control" id="security2"/>
+    <div id="security2_failed" class="Error"></div><br/>
 
 
       <div class="col-sm-offset col-sm-20">
          <div class="checkbox">
             <label>
-                   <input type="checkbox" id="i_agree"> I agree to the Terms of Use & Privacy Statement
+                   <input type="checkbox" id="i_agree"/> I agree to the Terms of Use and Privacy Statement
             </label>
          </div>
        </div>
 
   <div class="btn-group">
-    <a href="new_index.html" class="btn btn-primary">Sign Up</a> <h6><a href="new_login.html">Already a member?
-
-</a></h6>
+    <input type="submit" class="btn btn-primary" value="Sign up"/>
+    <h6><a href="new_login.html">Already a member?</a></h6>
   </div>
 </div>
 </div>
 </div>
-
 
 
   <div class= "container">
@@ -160,6 +168,7 @@ In what city or town does your nearest sibling live?
 </div>
 </div>
 </div>
+</form>
 </div>
 </div>
 </div>
