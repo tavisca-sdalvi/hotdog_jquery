@@ -58,16 +58,9 @@ border: 1px solid transparent;
 	margin-top: 10px;
 	margin-bottom: 10px;
 	font-family: inherit;
-	font-weight: 500;
-	line-height: 1.1;
-	color: inherit;
-	display: block;
+font-weight: 500;
+line-height: 1.1;
+color: inherit;
+display: block;
 }
-
-.wid
-{
-	width:100%;
-	height:100%;
-}
-
 
