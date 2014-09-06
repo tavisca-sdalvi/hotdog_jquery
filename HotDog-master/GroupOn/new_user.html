@@ -1,28 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-<script src="js/validation.js">
+<link rel="icon" href="icon1.ico" >
 
-
-
-</script>
-
-    <title>login</title>
+    <title>UserRegistration</title>
 
     <!-- Bootstrap core CSS -->
-    
+      <link rel="stylesheet" type="text/css" href="css/responsive.css" />
      <link rel="stylesheet" type="text/css" href="css/theme.css">
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    
+    <link href="starter-template.css" rel="stylesheet">
 
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
-    
+    <script src="../../assets/js/ie-emulation-modes-warning.js"></script>
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    
+    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -31,7 +28,6 @@
   </head>
 
   <body>
-    <!-- <form method="get" onsubmit="loginValidation()">-->
 <div class="row mydiv navbar-default navbar-inverse" role="navigation">
   <div class="container">
   <div class="col-md-3">
@@ -62,7 +58,8 @@
 
   <div class="col-md-3">
       <a href="new_dealreg.html" style="color:white;">REGISTER DEAL</a><font style="color:white;">|</font>
-    <a href="new_user.html" style="color:white;">SIGN UP</a>
+    <a href="new_user.html" style="color:white;">SIGN UP</a><font style="color:white;">|</font>
+    <a href="new_login.html" style="color:white;">SIGN IN</a>
   </div>
 </div>
  </div>
@@ -84,8 +81,7 @@
         </div>
         <div class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
-          
-            <li class="active" ><a href="#">Home</a></li>
+            <li><a href="#">Home</a></li>
             <li><a href="#" style="text-align: center;">Local&nbsp&nbsp</a></li>
         <li><a href="#" style="text-align: center;">Goods&nbsp&nbsp</a></li>
         <li><a href="#" style="text-align: center;">Gateways&nbsp&nbsp</a></li>
@@ -98,22 +94,23 @@
     </div>   </div>
               </header>
 
+
+
  
     
       </div>
     </div>
-
 <div class="container">
-  <div class="row">
-<div class="container">
-  <div class="row">
-<div class="container">
-   <div class="col-xs-6 col-md-3" >
+ <div class="row">
+ <div class="container">
+ <div class="row">
+ <div class="container">
+  <div class="col-xs-6 col-md-3" >
     <a href="#" class="thumbnail" style="text-align: center;">
       <h4>Our promise to you</h4>
       <p>We are confident in your Groupon experience and back it with the Groupon promise</p>
     </a>
-  </div>  
+  </div>     
 <div class= "container">
 
     <h3>Sign Up or Sign in</h3>
@@ -123,7 +120,7 @@
   <div class="row">
     <div>
       <div class="col-sm-6 col-sm-4">
-      <form class="form-signin" role="form" method="get" action="new_index.html" onsubmit="return loginValidation()">
+      <form class="form-signin" role="form" >
         <div>
         <h4 class="form-signin-heading">Sign up with your facebook account</h4>
 <h5>Connect your Facebook account to sign up to Groupon</h5> <img src="Images/img1.png" width="120px" height="30px"></div>
@@ -132,33 +129,37 @@
 <div class="container">
 <h4 class="form-signin-heading">Sign In for a Groupon account</h4>
 <div>
- 
+  
     <div class= "form-group">
-      
-<div class="col-xl-6">
-<label for="name">    Email <input type="text" id="txtEmail" class="form-control" onblur="return loginValidation()"/>
-  <div id="email_failed" class="Error"></div>
-  <br/>
-Password <input type="password" id="txtPassword" class="form-control" onblur="return loginValidation()"/>
-<div id="pswd_failed" class="Error"></div>
-  <br/>
+<div class="col-xl-6"><label for ="full name">Full name<input type="email" class="form-control">
+    Email <input type="email" class="form-control">
+Password <input type="password" class="form-control">
+Confirm <input type="password" class="form-control">
 
       <div class="col-sm-offset col-sm-20">
          <div class="checkbox">
             <label>
                <input type="checkbox"> Keep me signed in on this computer
+
             </label>
          </div>
       </div>
 
+      <div class="col-sm-offset col-sm-20">
+         <div class="checkbox">
+            <label>
+                   <input type="checkbox"> I agree to the Terms of Use & Privacy Statement
+            </label>
+         </div>
+       </div>
+
   <div class="btn-group">
-    <input type="submit" class="btn btn-primary" value="Sign In"/>
-    <h6><a href="new_user.html">Not a member?</a></h6>
+    <a href="new_index.html" class="btn btn-primary">Sign Up</a> <h6><a href="new_login.html">Already a member?
+
+</a></h6>
   </div>
 </div>
-
 </div>
-
 </div>
 
 
@@ -171,6 +172,7 @@ Password <input type="password" id="txtPassword" class="form-control" onblur="re
    
             <div class="col-6 col-sm-4 col-lg-4">
         <!-- <div class="col-xs-6 col-sm-4 sidebar-offcanvas" id="sidebar" role="navigation"> -->
+   
 </div>
 </div>
 </div>
@@ -186,8 +188,7 @@ Password <input type="password" id="txtPassword" class="form-control" onblur="re
 </div>
 </div>
 </div>
-
-<!-- footer starts -->
+ <!-- footer starts -->
 <div class="mydiv navbar-default navbar-inverse">
 <div class="container" style="margin-top:50px">
   <div class="row">
@@ -243,7 +244,6 @@ Password <input type="password" id="txtPassword" class="form-control" onblur="re
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-  </form>
   </body>
 </html>
 
