@@ -41,7 +41,7 @@ function loginValidation()
     }
     else{
         flag=false;
-        document.getElementById("not_user").innerHTML="not a registered user";
+        document.getElementById("not_user").innerHTML="invalid combination of ID and Password";
 
     }
  }
