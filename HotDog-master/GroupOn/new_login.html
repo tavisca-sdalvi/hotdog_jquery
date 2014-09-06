@@ -137,10 +137,10 @@
     <div class= "form-group">
       
 <div class="col-xl-6">
-<label for="name">    Email <input type="text" id="txtEmail" class="form-control" onblur="return loginValidation()"/>
+<label for="name">    Email <input type="text" id="txtEmail" class="form-control" onblur="lemailValidation()"/>
   <div id="email_failed" class="Error"></div>
   <br/>
-Password <input type="password" id="txtPassword" class="form-control" onblur="return loginValidation()"/>
+Password <input type="password" id="txtPassword" class="form-control" onblur="lpasswordValidation()"/>
 <div id="pswd_failed" class="Error"></div>
   <br/>
 
@@ -153,7 +153,8 @@ Password <input type="password" id="txtPassword" class="form-control" onblur="re
       </div>
 
   <div class="btn-group">
-    <input type="submit" class="btn btn-primary" value="Sign In"/>
+    <input type="submit" class="btn btn-primary" value="Sign In"/><br/><br/>
+    <div id="not_user" class="Error"></div>
     <h6><a href="new_user.html">Not a member?</a></h6>
   </div>
 </div>

@@ -30,6 +30,21 @@ function loginValidation()
  else{
  	document.getElementById("pswd_failed").innerHTML="";
  }
+
+ if(flag==true)
+ {
+    var ans=localStorage.getItem(email);
+    var res = ans.split("|");
+    var pass_from_string=res[0];
+    if(pass_from_string==password){
+        flag=true;
+    }
+    else{
+        flag=false;
+        document.getElementById("not_user").innerHTML="not a registered user";
+
+    }
+ }
  return flag;
 }
 
@@ -100,6 +115,13 @@ if(conf_password==""){
  else{
  	document.getElementById("pswd_signup_failed").innerHTML="";
  }
+if(flag==true){
+    var info=""+password+"|"+full_name+"|"+security1+"|"+security2;
+    
+    localStorage.setItem(email, info);
+    
+}
+
  return flag;	
 }
 
@@ -165,24 +187,18 @@ function upasswordvalidation()
 }
 function uconfpasswordvalidation()
 {
+    alert("hello");
     var password = document.getElementById("pswd").value;
     var conf_password = document.getElementById("confirm_pswd").value;
-    alert("password" + conf_password);
-    alert("reenter" + password);
-    if (!(password == conf_password)) {
-       
-        document.getElementById("cnfpswd_signup_failed").innerHTML = "Passwords donot match";
+    alert(conf_password);
+    alert("password" + password);
+    alert("reenter" + conf_password);
+    if ((password != conf_password)||(conf_password == "")) {
+        document.getElementById("cnfpswd_signup_failed").innerHTML = "retype password";
     }
     else {
-        document.getElementById("cnfpswd_signup_failed").innerHTML = "";
-    }
-
-    if (conf_password == "") {
-     
-        document.getElementById("cnfpswd_signup_failed").innerHTML = "Re-enter password";
-    }
-    else {
-        document.getElementById("cnfpswd_signup_failed").innerHTML = "";
+        alert("proper passwd");
+        document.getElementById("cnfpswd_match_failed").innerHTML = "b";
     }
 }
 function usecurity1validation()
