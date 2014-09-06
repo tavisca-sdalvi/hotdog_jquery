@@ -114,8 +114,11 @@
                     </div>
                     
                     </div>
-                    <div>
-                      <div class="col-md-12 col-sm-12 col-xs-12">
+                    
+ 
+   
+                    <div> 
+                     <div class="col-md-12 col-sm-12 col-xs-12">
                         <div class="deal_detail">Add Title</div>
                       <div><input type="text" style="width:100%;"> </div>
                       </div>
@@ -139,32 +142,33 @@
                         <div class="col-md-12 col-sm-12 col-xs-12">    
                         <div class="deal_detail"></div>
                       </div>
-
+ <form class="form-deal-reg" role="form" onsubmit="return contactvalidation()" method="get" action="success.html">  
                   <div>
                     <div class="col-md-12 col-sm-12 col-xs-12">
                       <div class="deal_detail">Contact Name:</div>
-                      <div><input type="text"  style="width:100%;"> </div>
+                      <div><input type="text" class="form-control" id="contact_name" onblur="contactvalidation()" style="width:100%;"/> </div>
+                    <div id="contact_name_failed" class="Error"></div>
                     </div>
                   </div>
-
                   <div>
                     <div class="col-md-12 col-sm-12 col-xs-12">
-                      <div class="deal_detail">Originl Price:</div>
-                      <div><input type="text"  style="width:100%;"> </div>
+                      <div class="deal_detail">Original Price:</div>
+                      <div><input type="text" class="form-control" id="price" onblur="pricevalidation()"  style="width:100%;"> </div>
+                    <div id="price_failed" class="Error"></div>
                     </div>
                   </div>
 
                   <div>
                     <div class="col-md-12 col-sm-12 col-xs-12">
                       <div class="deal_detail">Discount Price:</div>
-                      <div><input type="text"  style="width:100%;"> </div>
+                      <div><input type="text" class="form-control" id="price1" onblur="pricevalidation()" style="width:100%;"> </div>
+                    <div id="price1_failed" class="Error"></div>
                     </div>
                   </div>
 
               
                     </div>
-                  
-
+        
                   </div>
                     <div style=" width:60% float:right">
                     
@@ -180,6 +184,7 @@
                   </div>
 
 
+</form>
 
 </div>
 

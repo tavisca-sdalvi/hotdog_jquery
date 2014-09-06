@@ -1,12 +1,14 @@
 var emailpattern = /^([a-zA-Z0-9_.-])+@([a-zA-Z0-9_.-])+\.([a-zA-Z])+([a-zA-Z])+/;
 var passwordpattern = /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$/;
 var namepattern = /[A-Za-z]/;
+var contactpattern = /[A-Za-z]/;
+var pricepattern = /[0-9]/;
+var price1pattern = /[0-9]/;
 
 //validation for new_login page
 
 function loginValidation()
 {
- 
  var email = document.getElementById("txtEmail").value;
  var password  = document.getElementById("txtPassword").value;
  var flag=true;
@@ -268,4 +270,35 @@ function resetpassvalidation()
     }
  
     return flag;
+}
+
+function contactvalidation()
+{
+   var contact_name = document.getElementById("contact_name").value;
+    if (contact_name == "" || !contactpattern.test(contact_name)) {
+        document.getElementById("contact_name_failed").innerHTML = "Enter your contact name";
+    }
+    else {
+        document.getElementById("contact_name_failed").innerHTML = "";
+    }
+}
+
+function pricevalidation()
+{
+ var price = document.getElementById("price").value;
+    if (price == "" || !pricepattern.test(price)) {
+        document.getElementById("price_failed").innerHTML = "Enter the correct price";
+    }
+    else {
+        document.getElementById("price_failed").innerHTML = "";
+    }
+
+var price1 = document.getElementById("price1").value;
+    if (price1 == "" || !price1pattern.test(price1)) {
+        document.getElementById("price1_failed").innerHTML = "Enter the correct price";
+    }
+    else {
+        document.getElementById("price1_failed").innerHTML = "";
+    }
+
 }
