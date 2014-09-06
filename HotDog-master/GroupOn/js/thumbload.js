@@ -24,8 +24,7 @@ xmlhttp.onreadystatechange=function()
       str=txt.getElementsByTagName("photo")[0].childNodes[0].nodeValue;
       alert(str);
       document.getElementById("first_thumbnail").innerHTML+="<img src='"+str+"'>";
-   // document.getElementById("first_thumbnail").innerHTML=;
-    
+      
     }
   }
 xmlhttp.open("GET",url,true);
