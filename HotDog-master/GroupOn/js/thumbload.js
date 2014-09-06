@@ -23,8 +23,17 @@ xmlhttp.onreadystatechange=function()
      alert(txt);
       str=txt.getElementsByTagName("photo")[0].childNodes[0].nodeValue;
       alert(str);
+      str1=txt.getElementsByTagName("title")[0].childNodes[0].nodeValue;
+      alert(str1);
+      str2=txt.getElementsByTagName("description")[0].childNodes[0].nodeValue;
+      alert(str2);
+      str3=txt.getElementsByTagName("city")[0].childNodes[0].nodeValue;
+      alert(str3);
       document.getElementById("first_thumbnail").innerHTML+="<img src='"+str+"'>";
-   // document.getElementById("first_thumbnail").innerHTML=;
+      document.getElementById("first_title").innerHTML=str1;
+      document.getElementById("first_desc").innerHTML=str2;
+      document.getElementById("first_locn").innerHTML=str3;
+    
     
     }
   }
