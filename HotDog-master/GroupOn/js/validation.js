@@ -42,12 +42,6 @@ function uservalidation()
  var conf_password=document.getElementById("confirm_pswd").value;
  var security1=document.getElementById("security1").value;
  var security2=document.getElementById("security2").value;
-//var email_flag=true;
-//var password_flag=true;
-
- //var emailpattern=/^([a-zA-Z0-9_.-])+@([a-zA-Z0-9_.-])+\.([a-zA-Z])+([a-zA-Z])+/;
- //var passwordpattern=/^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$/;
-// var namepattern=/[A-Za-z]/;
 
 if(full_name=="" || !namepattern.test(full_name)){
  	flag=false;
