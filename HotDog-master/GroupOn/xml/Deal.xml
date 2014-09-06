@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<deal>
+  <category>food</category>
+  <title>Four-Course Japanese meal</title>
+  <description>Yamato Ya Japanese Restaurant</description>
+  <photo id="abc">Images/1.jpg</photo>
+  <contact_name>swap</contact_name>
+  <country>Japan</country>
+  <city>Tokyo</city>
+  <original_value>70</original_value>
+  <discount_price>40</discount_price>
+</deal>

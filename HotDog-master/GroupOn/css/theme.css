@@ -52,4 +52,15 @@ border: 1px solid transparent;
 	font-weight: 200;
 }
 
+.deal_detail
+{
+	font-size: 18px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	font-family: inherit;
+font-weight: 500;
+line-height: 1.1;
+color: inherit;
+display: block;
+}
 

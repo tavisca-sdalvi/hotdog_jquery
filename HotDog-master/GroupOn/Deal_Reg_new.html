@@ -7,6 +7,8 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">  
 
 <script src="js/validation.js"></script>
+<script type= "text/javascript" src="js/countries.js"></script>
+
 
         
   </head>
@@ -75,76 +77,110 @@
           </ul>
         </div><!--/.nav-collapse -->
       </div>
-    </div>   </div>
-              </header>
+    </div>   
 
- 
+<div class="container">
+  <div class="row">
+<div class="container">
+  <div class="row">
     
-      </div>
-    </div>
-
-<div class="container">
-  <div class="row">
-<div class="container">
-  <div class="row">
-<div class="container">
-   <div class="col-xs-6 col-md-3" >
-    <a href="#" class="thumbnail" style="text-align: center;">
-      <h4>Our promise to you</h4>
-      <p>We are confident in your Groupon experience and back it with the Groupon promise</p>
-    </a>
-  </div>  
 <div class= "container">
 
-    <h3>Sign Up or Sign in</h3>
+    <h3>Register Deal</h3>
 
 <div>
    
   <div class="row">
     
 <div class="container">
-<h4 class="form-signin-heading">Sign In for a Groupon account</h4>
 <div>
  
     <div class= "form-group">
-      
-<div class="col-xl-6">
+<div class="cust_detail" >
+                        
+                    
+                <div class="row">
+                  <div style="width:40%;float:left;">
+                    <div>
+                    <div class="col-md-12 col-sm-6 col-xs-12">
+                      <div class="deal_detail">Select Category</div>
+                     <select>
+                     <option value="Food">Food</option>
+                      <option value="Health">Health</option>
+                     <option value="Resort">Resort</option>
+                    <option value="Automobile">Automobile</option>
+                    </select>
 
-<label for="name">    Deal name:<input type="text" id="txtEmail" class="form-control"/>
-  <div id="Deal_name_failed" class="Error"></div>
-  <br/>
+                    </div>
+                    
+                    </div>
+                    <div>
+                      <div class="col-md-12 col-sm-12 col-xs-12">
+                        <div class="deal_detail">Add Title</div>
+                      <div><input type="text" style="width:100%;"> </div>
+                      </div>
+                      
+                    </div>
+                    <div>
+                      <div class="col-md-12 col-sm-12 col-xs-12">
+                         <div class="deal_detail">Description</div>
+                      <div><textarea  style="width:100%;"></textarea></div>
+                      </div>
+                      </div>
+                     <div>
+                       
+                      <div>
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                      <div class="deal_detail">Photo</div>
+                      <div><input type="file" > </div>
+                    </div>
+                  </div>
 
-Deal type: <div class="btn-group" id="Deal_type">
-  <button class="btn btn-default btn-sm dropdown-toggle" type="button" data-toggle="dropdown">
-    Select One <span class="caret"></span>
-  </button>
-  <ul class="dropdown-menu" role="menu">
-    <li>Food</li>
-    <li>Resorts</li>
-    <li>Games</li>
-    <li>Health</li>
-  </ul>
-</div>
-<div id="Deal_type_failed" class="Error"></div>
-  <br/>
+                        <div class="col-md-12 col-sm-12 col-xs-12">    
+                        <div class="deal_detail"></div>
+                      </div>
 
-Image:<input type="file"/> 
-  <br/>
+                  <div>
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                      <div class="deal_detail">Contact Name:</div>
+                      <div><input type="text"  style="width:100%;"> </div>
+                    </div>
+                  </div>
+
+                  <div>
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                      <div class="deal_detail">Originl Price:</div>
+                      <div><input type="text"  style="width:100%;"> </div>
+                    </div>
+                  </div>
+
+                  <div>
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                      <div class="deal_detail">Discount Price:</div>
+                      <div><input type="text"  style="width:100%;"> </div>
+                    </div>
+                  </div>
+
+              
+                    </div>
+                  
+
+                  </div>
+                    <div style=" width:60% float:right">
+                    
+                    <img src="Images/image1.jpg" class="img-responsive hidden-xs" style="height:100%; width:60%">
+                    
+                  </div>
+                </div>
+
+                 
+                  
+                  <div >
+                    <input type="submit" class="deal_detail"/>
+                  </div>
 
 
-      <div class="col-sm-offset col-sm-20">
-         <div class="checkbox" >
-            <label>
-               <input type="checkbox" id="chk"> Keep me signed in on this computer
-            </label>
-         </div>
-      </div>
 
-  <div class="btn-group">
-    <input type="submit" class="btn btn-primary" value="Sign In"/>
-    <h6><a href="new_user.html">Not a member?</a></h6>
-
-  </div>
 </div>
 
 </div>
@@ -172,10 +208,7 @@ Image:<input type="file"/>
 </div>
 </div>
 </div>
-</div>
-</div>
-</div>
-</div>
+
 
 <!-- footer starts -->
 <div class="mydiv navbar-default navbar-inverse">
@@ -183,35 +216,35 @@ Image:<input type="file"/>
   <div class="row">
     <div class="col-md-4 col-xs-3">
       <ul style="list-style: none;font-size:small;">
-        <li style="color:grey;"><font style="font-size:medium;">Company</font></li><br/>
-        <li ><a href="#" style="color:grey;">About Groupon</a></li><br/>
-        <li ><a href="#" style="color:grey;">Jobs</a></li><br/>
-        <li ><a href="#" style="color:grey;">Blogs</a></li><br/>
-        <li ><a href="#" style="color:grey;">Press</a></li><br/>
-        <li ><a href="#" style="color:grey;">Invester Relation</a></li><br/>
+        <li style="color:grey;"><font style="font-size:medium;">Company</font></li>
+        <li ><a href="#" style="color:grey;">About Groupon</a></li>
+        <li ><a href="#" style="color:grey;">Jobs</a></li>
+        <li ><a href="#" style="color:grey;">Blogs</a></li>
+        <li ><a href="#" style="color:grey;">Press</a></li>
+        <li ><a href="#" style="color:grey;">Invester Relation</a></li>
       </ul>
     </div>
     
 
     <div class="col-md-4 col-xs-3">
       <ul style="list-style: none;font-size:small;">
-        <li style="color:grey;"><font style="font-size:medium;">Work With Groupon</font></li><br/>
-        <li ><a href="#" style="color:grey;">Run a Groupon Deal</a></li><br/>
-        <li ><a href="#" style="color:grey;">Accept Groupon Payments</a></li><br/>
-        <li ><a href="#" style="color:grey;">Developers/API</a></li><br/>
-        <li ><a href="#" style="color:grey;">Affiliate Program</a></li><br/>
-        <li ><a href="#" style="color:grey;">Help Your Community</a></li><br/>
+        <li style="color:grey;"><font style="font-size:medium;">Work With Groupon</font></li>
+        <li ><a href="#" style="color:grey;">Run a Groupon Deal</a></li>
+        <li ><a href="#" style="color:grey;">Accept Groupon Payments</a></li>
+        <li ><a href="#" style="color:grey;">Developers/API</a></li>
+        <li ><a href="#" style="color:grey;">Affiliate Program</a></li>
+        <li ><a href="#" style="color:grey;">Help Your Community</a></li>
       </ul>
     </div>
 
     <div class="col-md-4 col-xs-3">
       <ul style="list-style: none;font-size:small;">
-        <li style="color:grey;"><font style="font-size:medium;">More</font></li><br/>
-        <li ><a href="#" style="color:grey;">Customers Suppoprt</a></li><br/>
-        <li ><a href="#" style="color:grey;">FAQ</a></li><br/>
-        <li ><a href="#" style="color:grey;">Coupons</a></li><br/>
-        <li ><a href="#" style="color:grey;">Gift Cards</a></li><br/>
-        <li ><a href="#" style="color:grey;">Ideel</a></li><br/>
+        <li style="color:grey;"><font style="font-size:medium;">More</font></li>
+        <li ><a href="#" style="color:grey;">Customers Suppoprt</a></li>
+        <li ><a href="#" style="color:grey;">FAQ</a></li>
+        <li ><a href="#" style="color:grey;">Coupons</a></li>
+        <li ><a href="#" style="color:grey;">Gift Cards</a></li>
+        <li ><a href="#" style="color:grey;">Ideel</a></li>
       </ul>
     </div>
     
@@ -227,13 +260,13 @@ Image:<input type="file"/>
 </div>
 </div>
 </div>
-</div>
+
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-  </form>
+
   </body>
 </html>
 
