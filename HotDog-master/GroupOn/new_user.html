@@ -125,7 +125,7 @@
     Password <input type="password" class="form-control" id="pswd" onblur="upasswordvalidation()"/>
     <div id="pswd_signup_failed" class="Error"></div><br/>
 
-    Confirm Password<input type="password" class="form-control" id="confirm_pswd" onblur="uconfpasswordvalidation()"/>
+    Confirm Password<input type="password" class="form-control" id="confirm_pswd" onfocus="password_hint()" onblur="uconfpasswordvalidation()"/>
     <div id="cnfpswd_signup_failed" class="Error"></div><br/>
 
 
@@ -139,9 +139,10 @@
 
       <div class="col-sm-offset col-sm-20">
          <div class="checkbox">
-            <label>
-                   <input type="checkbox" id="i_agree"/> I agree to the Terms of Use and Privacy Statement
+           <label>
+                   <input type="checkbox" onclick="checkboxclicked()" id="i_agree"/> I agree to the Terms of Use and Privacy Statement
             </label>
+            <div id="div_errorsms_iagree" class="Error"></div>
          </div>
        </div>
 
