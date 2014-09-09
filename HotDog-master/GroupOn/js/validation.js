@@ -183,7 +183,9 @@ function uconfpasswordvalidation()
         document.getElementById("cnfpswd_signup_failed").innerHTML = "Passwords donot match";
     }
     else {
+
         document.getElementById("cnfpswd_signup_failed").innerHTML = "";
+       
     }
 }
 function usecurity1validation()
