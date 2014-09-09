@@ -198,7 +198,7 @@ function uconfpasswordvalidation()
     }
     else {
         alert("proper passwd");
-        document.getElementById("cnfpswd_match_failed").innerHTML = "b";
+        document.getElementById("cnfpswd_signup_failed").innerHTML = "b";
     }
 }
 function usecurity1validation()
