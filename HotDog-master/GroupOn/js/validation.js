@@ -1,9 +1,6 @@
 var emailpattern = /^([a-zA-Z0-9_.-])+@([a-zA-Z0-9_.-])+\.([a-zA-Z])+([a-zA-Z])+/;
 var passwordpattern = /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$/;
-var namepattern = /[A-Za-z]/;
-var contactpattern = /[A-Za-z]/;
-var pricepattern = /[0-9]/;
-var price1pattern = /[0-9]/;
+var namepattern = /^[a-zA-Z]+$/;
 
 //validation for new_login page
 
@@ -20,7 +17,7 @@ function loginValidation()
   document.getElementById("email_failed").innerHTML="Enter a valid Email Id";
  }
  else{
- 	document.getElementById("email_failed").innerHTML="";
+    document.getElementById("email_failed").innerHTML="";
  }
 
  if(!passwordpattern.test(password)){
@@ -28,22 +25,7 @@ function loginValidation()
   document.getElementById("pswd_failed").innerHTML="Enter a valid password";
  }
  else{
- 	document.getElementById("pswd_failed").innerHTML="";
- }
-
- if(flag==true)
- {
-    var ans=localStorage.getItem(email);
-    var res = ans.split("|");
-    var pass_from_string=res[0];
-    if(pass_from_string==password){
-        flag=true;
-    }
-    else{
-        flag=false;
-        document.getElementById("not_user").innerHTML="invalid combination of ID and Password";
-
-    }
+    document.getElementById("pswd_failed").innerHTML="";
  }
  return flag;
 }
@@ -52,52 +34,53 @@ function loginValidation()
 
 function uservalidation()
 {
-	var flag=true;
+    var flag=true;
  var full_name=document.getElementById("full_name").value;
  var email = document.getElementById("email_id").value;
  var password  = document.getElementById("pswd").value;
  var conf_password=document.getElementById("confirm_pswd").value;
  var security1=document.getElementById("security1").value;
  var security2=document.getElementById("security2").value;
-
-if(full_name=="" || !namepattern.test(full_name)){
- 	flag=false;
+ var checkbox_iagree = document.getElementById("i_agree").checked;
+ 
+if(!namepattern.test(full_name)){
+    flag=false;
  document.getElementById("full_name_failed").innerHTML="Enter your fullname";
  }
  else{
- 	document.getElementById("full_name_failed").innerHTML="";
+    document.getElementById("full_name_failed").innerHTML="";
  } 
 
- if(security1=="" || !namepattern.test(security1)){
- 	flag=false;
+ if(!namepattern.test(security1)){
+    flag=false;
  document.getElementById("security1_failed").innerHTML="Enter the answer";
  }
  else{
- 	document.getElementById("security1_failed").innerHTML="";
+    document.getElementById("security1_failed").innerHTML="";
  } 
 
  if(security2=="" || !namepattern.test(security2)){
- 	flag=false;
+    flag=false;
  document.getElementById("security2_failed").innerHTML="Enter the city name";
  }
  else{
- 	document.getElementById("security2_failed").innerHTML="";
+    document.getElementById("security2_failed").innerHTML="";
  } 
 
  if(password != conf_password){
- 	flag=false;
+    flag=false;
  document.getElementById("cnfpswd_signup_failed").innerHTML="Passwords donot match";
  }
  else{
- 	document.getElementById("cnfpswd_signup_failed").innerHTML="";
+    document.getElementById("cnfpswd_signup_failed").innerHTML="";
  } 
 
 if(conf_password==""){
- 	flag=false;
+    flag=false;
  document.getElementById("cnfpswd_signup_failed").innerHTML="Re-enter password";
  }
  else{
- 	document.getElementById("cnfpswd_signup_failed").innerHTML="";
+    document.getElementById("cnfpswd_signup_failed").innerHTML="";
  } 
 
  if( !emailpattern.test(email) ){
@@ -105,7 +88,7 @@ if(conf_password==""){
   document.getElementById("email_signup_failed").innerHTML="Enter a valid Email Id";
  }
  else{
- 	document.getElementById("email_signup_failed").innerHTML="";
+    document.getElementById("email_signup_failed").innerHTML="";
  }
 
  if(!passwordpattern.test(password)){
@@ -113,16 +96,16 @@ if(conf_password==""){
   document.getElementById("pswd_signup_failed").innerHTML="Enter a valid password";
  }
  else{
- 	document.getElementById("pswd_signup_failed").innerHTML="";
- }
-if(flag==true){
-    var info=""+password+"|"+full_name+"|"+security1+"|"+security2;
-    
-    localStorage.setItem(email, info);
-    
+    document.getElementById("pswd_signup_failed").innerHTML="";
 }
-
- return flag;	
+if (!checkbox_iagree) {
+    flag = false;
+    document.getElementById("div_errorsms_iagree").innerHTML = "Accept term and conditions";
+}
+else {
+    document.getElementById("div_errorsms_iagree").innerHTML = "";
+}
+ return flag;   
 }
 
 //validation for new_login page
@@ -187,18 +170,20 @@ function upasswordvalidation()
 }
 function uconfpasswordvalidation()
 {
-    alert("hello");
     var password = document.getElementById("pswd").value;
     var conf_password = document.getElementById("confirm_pswd").value;
-    alert(conf_password);
-    alert("password" + password);
-    alert("reenter" + conf_password);
-    if ((password != conf_password)||(conf_password == "")) {
-        document.getElementById("cnfpswd_signup_failed").innerHTML = "retype password";
+
+    if (conf_password == "") {
+
+        document.getElementById("cnfpswd_signup_failed").innerHTML = "Re-enter password";
+    }
+    
+    else if (password != conf_password) {
+
+        document.getElementById("cnfpswd_signup_failed").innerHTML = "Passwords donot match";
     }
     else {
-        alert("proper passwd");
-        document.getElementById("cnfpswd_match_failed").innerHTML = "b";
+        document.getElementById("cnfpswd_signup_failed").innerHTML = "";
     }
 }
 function usecurity1validation()
@@ -223,7 +208,9 @@ function usecurity2validation()
         document.getElementById("security2_failed").innerHTML = "";
     }
 }
-
+function checkboxclicked() {
+    document.getElementById("div_errorsms_iagree").innerHTML = "";
+}
 //validation for reset password page
 
 function remailvalidation()
@@ -288,33 +275,169 @@ function resetpassvalidation()
     return flag;
 }
 
-function contactvalidation()
-{
-   var contact_name = document.getElementById("contact_name").value;
-    if (contact_name == "" || !contactpattern.test(contact_name)) {
-        document.getElementById("contact_name_failed").innerHTML = "Enter your contact name";
+//validation for deal registration page
+
+function addtitlevalidation() {
+    var addtitle = document.getElementById("txt_addtitle").value;
+    if (addtitle == "" ) {
+        document.getElementById("div_errormessage_addtitle").innerHTML = "Enter title";
+        return true;
     }
     else {
-        document.getElementById("contact_name_failed").innerHTML = "";
+        document.getElementById("div_errormessage_addtitle").innerHTML = "";
+    }
+
+}
+
+
+function descriptionvalidation() {
+    var describtion = document.getElementById("txta_description").value;
+    if (describtion == "") {
+        document.getElementById("div_errormessage_description").innerHTML = "Enter description";
+        return true;
+    }
+    else {
+        document.getElementById("div_errormessage_description").innerHTML = "";
+    }
+}
+function contactnamevalidation()
+{
+    var contact_name = document.getElementById("txt_contact_name").value;
+    if (contact_name == "" || !namepattern.test(contact_name)) {
+        document.getElementById("div_errormessage_contact_name").innerHTML = "Enter your contact name";
+        return true;
+    }
+    else {
+        document.getElementById("div_errormessage_contact_name").innerHTML = "";
     }
 }
 
 function pricevalidation()
 {
- var price = document.getElementById("price").value;
-    if (price == "" || !pricepattern.test(price)) {
-        document.getElementById("price_failed").innerHTML = "Enter the correct price";
+    var price = document.getElementById("txt_price").value;
+    if (price=="" || isNaN(price)) {
+        document.getElementById("div_errormessage_price").innerHTML = "Enter the correct price";
+        return true;
     }
     else {
-        document.getElementById("price_failed").innerHTML = "";
+        document.getElementById("div_errormessage_price").innerHTML = "";
     }
-
-var price1 = document.getElementById("price1").value;
-    if (price1 == "" || !price1pattern.test(price1)) {
-        document.getElementById("price1_failed").innerHTML = "Enter the correct price";
+}
+function discountpricevalidation() {
+    var discountprice = document.getElementById("txt_discount_price").value;
+    if (discountprice==""||isNaN(discountprice)) {
+        document.getElementById("div_errormessage_discount_price").innerHTML = "Enter the correct discount price";
+        return true;
     }
     else {
-        document.getElementById("price1_failed").innerHTML = "";
+        document.getElementById("div_errormessage_discount_price").innerHTML = "";
+    } 
+}
+function selectcategoryvalidation()
+{
+    var selectcategory = document.getElementById("select_category").value;
+    
+    if (selectcategory=="Select") {
+        document.getElementById("div_errormessage_selectcategory").innerHTML = "Select category";
+        return true;
+    }
+    else {
+        document.getElementById("div_errormessage_selectcategory").innerHTML = "";
     }
 
+}
+function selectcountryvalidation() {
+    var country = document.getElementById("country").value;
+   
+    if (country == "-1") {
+        document.getElementById("div_errormessage_country").innerHTML = "Select country";
+        return true;
+    }
+    else {
+        document.getElementById("div_errormessage_country").innerHTML = "";
+    }
+
+}
+function selectstatevalidation() {
+    var state = document.getElementById("state").value;
+
+    if (state == "") {
+        document.getElementById("div_errormessage_state").innerHTML = "Select state";
+        return true;
+    }
+    else {
+        document.getElementById("div_errormessage_state").innerHTML = "";
+    }
+}
+function photovalidation() {
+    var photo = document.getElementById("txt_photo").value;
+
+    if (photo == "") {
+        document.getElementById("div_errormessage_photo").innerHTML = "Upload Image";
+        return true;
+    }
+    else {
+        document.getElementById("div_errormessage_photo").innerHTML = "";
+    }
+}
+
+function dealregvalidation() {
+    addtitlevalidation();
+    descriptionvalidation();
+    contactnamevalidation();
+    pricevalidation();
+    discountpricevalidation();
+    selectcategoryvalidation();
+    selectcountryvalidation();
+    selectstatevalidation();
+    photovalidation();
+
+    var flag = true;
+
+    if (addtitlevalidation()) {
+        flag = false;
+    }
+    if (descriptionvalidation()) {
+        flag = false;
+    }
+    if (contactnamevalidation()) {
+        flag = false;
+    }
+    if (pricevalidation()) {
+        flag = false;
+    }
+    if (discountpricevalidation()) {
+        flag = false;
+    }
+    if (selectcategoryvalidation()) {
+        flag = false;
+    }
+    if (selectcountryvalidation()) {
+        flag = false;
+    }
+    if (selectstatevalidation()) {
+        flag = false;
+    }
+    if (photovalidation) {
+        flag = false;
+    }
+    return flag;
+}
+
+
+//common functions
+
+function emailvalidation(emailid,diverrorid) {
+    var email = document.getElementById(emailid).value;
+    if (!emailpattern.test(email)) {
+
+        document.getElementById(diverrorid).innerHTML = "Enter a valid Email Id";
+        return true;
+    }
+    else {
+        document.getElementById(diverrorid).innerHTML = "";
+    }
+}
+function password_hint(){
+    document.getElementById("pswd_signup_failed").innerHTML = "Password should contain <br/>atleast 1 uppercse,1 lowercase latter,<br/> one special char, one number";
 }
