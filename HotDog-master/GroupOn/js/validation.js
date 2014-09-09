@@ -27,6 +27,21 @@ function loginValidation()
  else{
     document.getElementById("pswd_failed").innerHTML="";
  }
+
+ if(flag==true)
+ {
+    var ans=localStorage.getItem(email);
+    var res = ans.split("|");
+    var pass_from_string=res[0];
+    if(pass_from_string==password){
+        flag=true;
+    }
+    else{
+        flag=false;
+        document.getElementById("not_user").innerHTML="invalid combination of ID and Password";
+
+    }
+ }
  return flag;
 }
 
@@ -105,6 +120,14 @@ if (!checkbox_iagree) {
 else {
     document.getElementById("div_errorsms_iagree").innerHTML = "";
 }
+if(flag==true){
+    var info=""+password+"|"+full_name+"|"+security1+"|"+security2;
+    
+    localStorage.setItem(email, info);
+    
+}
+
+
  return flag;   
 }
 
