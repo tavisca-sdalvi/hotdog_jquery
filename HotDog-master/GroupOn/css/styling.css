@@ -1,0 +1,33 @@
+#header_left{
+ border-top-left-radius:20px;border-bottom-left-radius:20px;
+}
+#header_right{
+	border-top-right-radius:20px;border-bottom-right-radius:20px;
+}
+#menu{
+	text-align: center;
+}
+#menu2{
+	color: grey;
+}
+#footer{
+	list-style: none;font-size:small;
+}
+#footer2{
+	font-size:medium;
+}
+#reg{
+	color:white;
+}
+#right{
+	text-align:right;
+}
+#green{
+	color:green;
+}
+#container{
+	list-style:none;
+}
+#contents{
+	color:black;text-decoration:none;
+}
