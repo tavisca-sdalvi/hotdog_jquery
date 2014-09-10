@@ -1,31 +1,31 @@
 var emailpattern = /^([a-zA-Z0-9_.-])+@([a-zA-Z0-9_.-])+\.([a-zA-Z])+([a-zA-Z])+/;
 var passwordpattern = /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$/;
-var namepattern = /^[a-zA-Z]+$/;
+var namepattern = /^[a-zA-Z ]+$/;
 
 //validation for new_login page
 
 function loginValidation()
 {
- var email = document.getElementById("txtEmail").value;
- var password  = document.getElementById("txtPassword").value;
+ var email = $("#txtEmail").val();
+ var password  = $("#txtPassword").val();
  var flag=true;
 
 
 
  if( !emailpattern.test(email) ){
   flag=false;
-  document.getElementById("email_failed").innerHTML="Enter a valid Email Id";
+  $("#email_failed").html("Enter a valid Email Id");
  }
  else{
-    document.getElementById("email_failed").innerHTML="";
+    $("#email_failed").html("");
  }
 
  if(!passwordpattern.test(password)){
   flag=false;
-  document.getElementById("pswd_failed").innerHTML="Enter a valid password";
+  $("#pswd_failed").html("Enter a valid password");
  }
  else{
-    document.getElementById("pswd_failed").innerHTML="";
+    $("#pswd_failed").html("");
  }
 
  if(flag==true)
@@ -38,87 +38,86 @@ function loginValidation()
     }
     else{
         flag=false;
-        document.getElementById("not_user").innerHTML="invalid combination of ID and Password";
+        $("#not_user").html("invalid combination of ID and Password");
 
     }
  }
  return flag;
 }
-
 //validation for new_user page
 
 function uservalidation()
 {
     var flag=true;
- var full_name=document.getElementById("full_name").value;
- var email = document.getElementById("email_id").value;
- var password  = document.getElementById("pswd").value;
- var conf_password=document.getElementById("confirm_pswd").value;
- var security1=document.getElementById("security1").value;
- var security2=document.getElementById("security2").value;
- var checkbox_iagree = document.getElementById("i_agree").checked;
+ var full_name=$("#full_name").val();
+ var email = $("#email_id").val();
+ var password  = $("#pswd").val();
+ var conf_password=$("#confirm_pswd").val();
+ var security1=$("#security1").val();
+ var security2=$("#security2").val();
+ var checkbox_iagree = $("#i_agree").attr('checked');
  
 if(!namepattern.test(full_name)){
     flag=false;
- document.getElementById("full_name_failed").innerHTML="Enter your fullname";
+ $("#full_name_failed").html("Enter your fullname");
  }
  else{
-    document.getElementById("full_name_failed").innerHTML="";
+    $("#full_name_failed").html("");
  } 
 
  if(!namepattern.test(security1)){
     flag=false;
- document.getElementById("security1_failed").innerHTML="Enter the answer";
+ $("#security1_failed").html("Enter the answer");
  }
  else{
-    document.getElementById("security1_failed").innerHTML="";
+    $("#security1_failed").html("");
  } 
 
  if(security2=="" || !namepattern.test(security2)){
     flag=false;
- document.getElementById("security2_failed").innerHTML="Enter the city name";
+ $("#security2_failed").html("Enter the city name");
  }
  else{
-    document.getElementById("security2_failed").innerHTML="";
+    $("#security2_failed").html("");
  } 
 
  if(password != conf_password){
     flag=false;
- document.getElementById("cnfpswd_signup_failed").innerHTML="Passwords donot match";
+ $("#cnfpswd_signup_failed").html("Passwords donot match");
  }
  else{
-    document.getElementById("cnfpswd_signup_failed").innerHTML="";
+    $("#cnfpswd_signup_failed").html("");
  } 
 
 if(conf_password==""){
     flag=false;
- document.getElementById("cnfpswd_signup_failed").innerHTML="Re-enter password";
+ $("#cnfpswd_signup_failed").html("Re-enter password");
  }
  else{
-    document.getElementById("cnfpswd_signup_failed").innerHTML="";
+    $("#cnfpswd_signup_failed").html("");
  } 
 
  if( !emailpattern.test(email) ){
   flag=false;
-  document.getElementById("email_signup_failed").innerHTML="Enter a valid Email Id";
+  $("#email_signup_failed").html("Enter a valid Email Id");
  }
  else{
-    document.getElementById("email_signup_failed").innerHTML="";
+    $("#email_signup_failed").html("");
  }
 
  if(!passwordpattern.test(password)){
   flag=false;
-  document.getElementById("pswd_signup_failed").innerHTML="Enter a valid password";
+  $("#pswd_signup_failed").html("Enter a valid password");
  }
  else{
-    document.getElementById("pswd_signup_failed").innerHTML="";
+    $("#pswd_signup_failed").html("");
 }
 if (!checkbox_iagree) {
     flag = false;
-    document.getElementById("div_errorsms_iagree").innerHTML = "Accept term and conditions";
+    $("#div_errorsms_iagree").html("Accept term and conditions");
 }
 else {
-    document.getElementById("div_errorsms_iagree").innerHTML = "";
+    $("#div_errorsms_iagree").html("");
 }
 if(flag==true){
     var info=""+password+"|"+full_name+"|"+security1+"|"+security2;
@@ -131,28 +130,33 @@ if(flag==true){
  return flag;   
 }
 
+
+//ok
+
+
+
 //validation for new_login page
 
 function lemailValidation()
 {
-    var email = document.getElementById("txtEmail").value;
+    var email = $("#txtEmail").val();
     if (!emailpattern.test(email)) {
         
-        document.getElementById("email_failed").innerHTML = "Enter valid Email Id";
+        $("#email_failed").html("Enter valid Email Id");
     }
     else {
-        document.getElementById("email_failed").innerHTML = "";
+        $("#email_failed").html("");
     }
 }
 function lpasswordValidation()
 {
-    var password = document.getElementById("txtPassword").value;
+    var password = $("#txtPassword").val();
     if (!passwordpattern.test(password)) {
        
-        document.getElementById("pswd_failed").innerHTML = "Enter valid password";
+        $("#pswd_failed").html("Enter valid password");
     }
     else {
-        document.getElementById("pswd_failed").innerHTML = "";
+        $("#pswd_failed").html("");
     }
 }
 
@@ -160,119 +164,121 @@ function lpasswordValidation()
 
 function ufullnamevalidation()
 {
-    var full_name = document.getElementById("full_name").value;
+    var full_name = $("#full_name").val();
     if (full_name == "" || !namepattern.test(full_name)) {
        
-        document.getElementById("full_name_failed").innerHTML = "Enter your fullname";
+        $("#full_name_failed").html("Enter your fullname");
     }
     else {
-        document.getElementById("full_name_failed").innerHTML = "";
+        $("#full_name_failed").html("");
     }
 }
 function uemailvalidation()
 {
-    var email = document.getElementById("email_id").value;
+    var email = $("#email_id").val();
     if (!emailpattern.test(email)) {
        
-        document.getElementById("email_signup_failed").innerHTML = "Enter a valid Email Id";
+        $("#email_signup_failed").html("Enter a valid Email Id");
     }
     else {
-        document.getElementById("email_signup_failed").innerHTML = "";
+        $("#email_signup_failed").html("");
     }
 }
 function upasswordvalidation()
 {
-    var password = document.getElementById("pswd").value;
+    var password = $("#pswd").val();
     if (!passwordpattern.test(password)) {
        
-        document.getElementById("pswd_signup_failed").innerHTML = "Enter a valid password";
+        $("#pswd_signup_failed").html("Enter a valid password");
     }
     else {
-        document.getElementById("pswd_signup_failed").innerHTML = "";
+        $("#pswd_signup_failed").html("");
     }
 }
 function uconfpasswordvalidation()
 {
-    var password = document.getElementById("pswd").value;
-    var conf_password = document.getElementById("confirm_pswd").value;
+    var password = $("#pswd").val();
+    var conf_password = $("#confirm_pswd").val();
 
     if (conf_password == "") {
 
-        document.getElementById("cnfpswd_signup_failed").innerHTML = "Re-enter password";
+        $("#cnfpswd_signup_failed").html("Re-enter password");
     }
     
     else if (password != conf_password) {
 
-        document.getElementById("cnfpswd_signup_failed").innerHTML = "Passwords donot match";
+        $("#cnfpswd_signup_failed").html("Passwords donot match");
     }
     else {
 
-        document.getElementById("cnfpswd_signup_failed").innerHTML = "";
+        $("#cnfpswd_signup_failed").html("");
        
     }
 }
 function usecurity1validation()
 {
-    var security1 = document.getElementById("security1").value;
+    var security1 = $("#security1").val();
     if (security1 == "" || !namepattern.test(security1)) {
       
-        document.getElementById("security1_failed").innerHTML = "Enter the answer";
+        $("#security1_failed").html("Enter the answer");
     }
     else {
-        document.getElementById("security1_failed").innerHTML = "";
+        $("#security1_failed").html("");
     }
 }
 function usecurity2validation()
 {
-    var security2 = document.getElementById("security2").value;
+    var security2 = $("#security2").val();
     if (security2 == "" || !namepattern.test(security2)) {
       
-        document.getElementById("security2_failed").innerHTML = "Enter the city name";
+        $("#security2_failed").html("Enter the city name");
     }
     else {
-        document.getElementById("security2_failed").innerHTML = "";
+        $("#security2_failed").html("");
     }
 }
 function checkboxclicked() {
-    document.getElementById("div_errorsms_iagree").innerHTML = "";
+    $("#div_errorsms_iagree").html("");
 }
+//ok
+
 //validation for reset password page
 
 function remailvalidation()
 {
-    var email = document.getElementById("rtxtemail").value;
+    var email = $("#rtxtemail").val();
     if (!emailpattern.test(email)) {
 
-        document.getElementById("divemailerrormessage").innerHTML = "Enter a valid Email Id";
+        $("#divemailerrormessage").html("Enter a valid Email Id");
         return true;
     }
     else {
-        document.getElementById("divemailerrormessage").innerHTML = "";
+        $("#divemailerrormessage").html("");
     }
 }
 
 function rsecurityque1validation()
 {
-    var security1 = document.getElementById("rtxtsecurityque1").value;
+    var security1 = $("#rtxtsecurityque1").val();
     if (security1 == "" || !namepattern.test(security1)) {
 
-        document.getElementById("divsecurityque1errormessage").innerHTML = "Enter the answer";
+        $("#divsecurityque1errormessage").html("Enter the answer");
         return true;
     }
     else {
-        document.getElementById("divsecurityque1errormessage").innerHTML = "";
+        $("#divsecurityque1errormessage").html("");
     }
 }
 
 function rsecurityque2validation() {
-    var security1 = document.getElementById("rtxtsecurityque2").value;
+    var security1 = $("#rtxtsecurityque2").val();
     if (security1 == "" || !namepattern.test(security1)) {
 
-        document.getElementById("divsecurityque2errormessage").innerHTML = "Enter the city name";
+        $("#divsecurityque2errormessage").html("Enter the city name");
         return true;
     }
     else {
-        document.getElementById("divsecurityque2errormessage").innerHTML = "";
+        $("#divsecurityque2errormessage").html("");
     }
 }
 
@@ -300,109 +306,112 @@ function resetpassvalidation()
     return flag;
 }
 
+//ok
+
+
 //validation for deal registration page
 
 function addtitlevalidation() {
-    var addtitle = document.getElementById("txt_addtitle").value;
+    var addtitle = $("#txt_addtitle").val();
     if (addtitle == "" ) {
-        document.getElementById("div_errormessage_addtitle").innerHTML = "Enter title";
+        $("#div_errormessage_addtitle").html("Enter title");
         return true;
     }
     else {
-        document.getElementById("div_errormessage_addtitle").innerHTML = "";
+        $("#div_errormessage_addtitle").html("");
     }
 
 }
 
 
 function descriptionvalidation() {
-    var describtion = document.getElementById("txta_description").value;
+    var describtion = $("#txta_description").val();
     if (describtion == "") {
-        document.getElementById("div_errormessage_description").innerHTML = "Enter description";
+        $("#div_errormessage_description").html("Enter description");
         return true;
     }
     else {
-        document.getElementById("div_errormessage_description").innerHTML = "";
+        $("#div_errormessage_description").html("");
     }
 }
 function contactnamevalidation()
 {
-    var contact_name = document.getElementById("txt_contact_name").value;
+    var contact_name = $("#txt_contact_name").val();
     if (contact_name == "" || !namepattern.test(contact_name)) {
-        document.getElementById("div_errormessage_contact_name").innerHTML = "Enter your contact name";
+        $("#div_errormessage_contact_name").html("Enter your contact name");
         return true;
     }
     else {
-        document.getElementById("div_errormessage_contact_name").innerHTML = "";
+        $("#div_errormessage_contact_name").html("");
     }
 }
 
 function pricevalidation()
 {
-    var price = document.getElementById("txt_price").value;
+    var price = $("#txt_price").val();
     if (price=="" || isNaN(price)) {
-        document.getElementById("div_errormessage_price").innerHTML = "Enter the correct price";
+        $("#div_errormessage_price").html("Enter the correct price");
         return true;
     }
     else {
-        document.getElementById("div_errormessage_price").innerHTML = "";
+        $("#div_errormessage_price").html("");
     }
 }
 function discountpricevalidation() {
-    var discountprice = document.getElementById("txt_discount_price").value;
+    var discountprice = $("txt_discount_price").val();
     if (discountprice==""||isNaN(discountprice)) {
-        document.getElementById("div_errormessage_discount_price").innerHTML = "Enter the correct discount price";
+        $("#div_errormessage_discount_price").html("Enter the correct discount price");
         return true;
     }
     else {
-        document.getElementById("div_errormessage_discount_price").innerHTML = "";
+        $("#div_errormessage_discount_price").html("");
     } 
 }
 function selectcategoryvalidation()
 {
-    var selectcategory = document.getElementById("select_category").value;
+    var selectcategory = $("#select_category").val();
     
     if (selectcategory=="Select") {
-        document.getElementById("div_errormessage_selectcategory").innerHTML = "Select category";
+        $("#div_errormessage_selectcategory").html("Select category");
         return true;
     }
     else {
-        document.getElementById("div_errormessage_selectcategory").innerHTML = "";
+        $("#div_errormessage_selectcategory").html("");
     }
 
 }
 function selectcountryvalidation() {
-    var country = document.getElementById("country").value;
+    var country = $("#country").val();
    
     if (country == "-1") {
-        document.getElementById("div_errormessage_country").innerHTML = "Select country";
+        $("#div_errormessage_country").html("Select country");
         return true;
     }
     else {
-        document.getElementById("div_errormessage_country").innerHTML = "";
+        $("#div_errormessage_country").html("");
     }
 
 }
 function selectstatevalidation() {
-    var state = document.getElementById("state").value;
+    var state = $("#state").val();
 
     if (state == "") {
-        document.getElementById("div_errormessage_state").innerHTML = "Select state";
+        $("#div_errormessage_state").html("Select state");
         return true;
     }
     else {
-        document.getElementById("div_errormessage_state").innerHTML = "";
+        $("#div_errormessage_state").html("");
     }
 }
 function photovalidation() {
-    var photo = document.getElementById("txt_photo").value;
+    var photo = $("#txt_photo").val();
 
     if (photo == "") {
-        document.getElementById("div_errormessage_photo").innerHTML = "Upload Image";
+        $("#div_errormessage_photo").html("Upload Image");
         return true;
     }
     else {
-        document.getElementById("div_errormessage_photo").innerHTML = "";
+        $("#div_errormessage_photo").html("");
     }
 }
 
@@ -449,20 +458,19 @@ function dealregvalidation() {
     return flag;
 }
 
-
 //common functions
 
 function emailvalidation(emailid,diverrorid) {
-    var email = document.getElementById(emailid).value;
+    var email = $(emailid).val();
     if (!emailpattern.test(email)) {
 
-        document.getElementById(diverrorid).innerHTML = "Enter a valid Email Id";
+        $(diverrorid).html("Enter a valid Email Id");
         return true;
     }
     else {
-        document.getElementById(diverrorid).innerHTML = "";
+        $(diverrorid).html("");
     }
 }
 function password_hint(){
-    document.getElementById("pswd_signup_failed").innerHTML = "Password should contain <br/>atleast 1 uppercse,1 lowercase latter,<br/> one special char, one number";
+    $("#pswd_signup_failed").html("Password should contain <br/>atleast 1 uppercse,1 lowercase latter,<br/> one special char, one number");
 }
