@@ -1,0 +1,98 @@
+var jsonobj=
+{
+"start":
+[{
+   "category": "food",
+
+   "_title": "Four-Course Japanese meal",
+
+   "_location": "Yamato Ya Japanese Restaurants",
+
+   "description": "abc",
+
+   "photo": "Images/1.jpg",
+
+   "contact_name": "swap",
+
+   "country": "Japan",
+
+   "city": "Tokyo",
+
+   "original_value": "70",
+
+   "discount_price": "40"
+},
+
+{
+
+   "category": "food",
+
+   "_title": "50% Off Spanish-Fusion Cuisine",
+
+   "_location": "Pepe's Turnagain House",
+
+   "description": [],
+
+   "photo": "Images/2.jpg",
+
+   "contact_name": "swap",
+
+   "country": "Japan",
+
+   "city": "sook",
+
+   "original_value": "50",
+
+   "discount_price": "30"
+
+},
+
+{
+
+   "category": "resort",
+
+   "_title": "Sooke Harbour Resort",
+
+   "_location": "Best Western Premier",
+
+   "description": [],
+
+   "photo": "Images/3.jpg",
+
+   "contact_name": "swap",
+
+   "country": "Japan",
+
+   "city": "sook",
+
+   "original_value": "453",
+
+   "discount_price": "259"
+
+},
+
+{
+
+   "category": "resort",
+
+   "_title": "Beginner Mosaic Class",
+
+   "_location": "Clay Owen Studios",
+
+   "description": [],
+
+   "photo": "Images/6.jpg",
+
+   "contact_name": "swap",
+
+   "country": "Japan",
+
+   "city": "Anchorage",
+
+   "original_value": "100",
+
+   "discount_price": "55"
+
+}]
+
+}

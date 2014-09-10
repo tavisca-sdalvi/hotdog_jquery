@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+<link rel="icon" href="icon1.ico" >
+
+    <title>UserRegistration</title>
+
+    <!-- Bootstrap core CSS -->
+      
+     <link rel="stylesheet" type="text/css" href="css/theme.css">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <script src="js/validation.js"></script>
+<link rel="icon" href="icon1.ico">
+  </head>
+
+  <body>
+<div class="row mydiv navbar-default navbar-inverse" role="navigation">
+  <div class="container">
+  <div class="col-md-3">
+    <a class="navbar-brand" id="logo" href="#">GROUPON &nbsp&nbsp</a>
+  </div>
+
+  
+  <div class="col-md-6">
+    <div class="row">
+      <div class="textboxstle1 col-md-6 hidden-xs">
+    <div class="form-group">
+    <div class="input-group">
+      <div class="input-group-addon" class="header_left"><span class="glyphicon glyphicon-search"></span></div>
+      <input class="form-control" type="email" placeholder="What are you looking for?" id="looking_for">
+    </div>
+  </div>
+  </div>
+  <div class="textboxstle2 col-md-6 hidden-xs">
+  <div class="form-group">
+    <div class="input-group">
+      <div class="input-group-addon"><span class="glyphicon glyphicon-map-marker"></span></div>
+      <input class="form-control"  class="header_right" type="email" placeholder="Enter your location" id="location">
+    </div>
+    </div>
+  </div>
+  </div>
+  </div>
+
+<div class="col-md-3">
+    <a href="new_user.html" class="reg">SIGN UP</a><font class="reg">|</font>
+    <a href="new_login.html" class="reg">SIGN IN</a>
+  </div>
+</div>
+ </div>
+
+
+
+ <div class="navbar navbar-inverse " role="navigation">
+   
+   <!-- <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">-->
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        
+        </div>
+        <div class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="new_index.html">Home</a></li>
+           <li><a href="#" class="menu">Local&nbsp&nbsp</a></li>
+        <li><a href="#" class="menu">Goods&nbsp&nbsp</a></li>
+        <li><a href="#" class="menu">Gateways&nbsp&nbsp</a></li>
+        <li><a href="#" class="menu">Clearance&nbsp&nbsp</a></li>
+        <li><a href="#" class="menu">Coupons&nbsp&nbsp</a></li>
+        <li><a href="#" class="menu">We Dare you&nbsp&nbsp</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>   </div>
+              </header>
+
+
+
+ 
+    
+      </div>
+    </div>
+<div class="container">
+ <div class="row">
+ <div class="container">
+ <div class="row">
+ <div class="container">
+  <div class="col-xs-6 col-md-3" >
+    <a href="#" class="thumbnail" class="menu">
+      <h4>Our promise to you</h4>
+      <p>We are confident in your Groupon experience and back it with the Groupon promise</p>
+    </a>
+  </div>     
+<div class= "container">
+
+    <h3>Sign Up or Sign in</h3>
+
+<div>
+   
+  <div class="row">
+    <div>
+      <div class="col-sm-6 col-sm-4">
+      <form class="form-signin" role="form" onsubmit="return uservalidation()" action="new_login.html">
+        <div>
+        <h4 >Sign up with your facebook account</h4>
+<h5>Connect your Facebook account to sign up to Groupon</h5> <img src="Images/img1.png" width="120px" height="30px"></div>
+</div>
+</div>
+<div class="container">
+<h4 class="form-signin-heading">Sign In for a Groupon account</h4>
+<div>
+  
+    <div class= "form-group"> 
+  <div class="col-xl-6"><label for ="full name">Full name<input type="text" class="form-control" id="full_name" onblur="ufullnamevalidation()"/>
+  <div id="full_name_failed" class="Error"></div><br/>
+  
+     Email <input type="text" class="form-control" id="email_id" onblur="uemailvalidation()"/>
+    <div id="email_signup_failed" class="Error"></div><br/>
+    
+    Password <input type="password" class="form-control" id="pswd" onblur="upasswordvalidation()" onfocus="password_hint()"/>
+    <div id="pswd_signup_failed" class="Error"></div><br/>
+
+    Confirm Password<input type="password" class="form-control" id="confirm_pswd"  onblur="uconfpasswordvalidation()"/>
+    <div id="cnfpswd_signup_failed" class="Error"></div><br/>
+
+
+    
+    What was your maternal grandfather's first name?<input type="text" class="form-control" id="security1" onblur="usecurity1validation()"/>
+    <div id="security1_failed" class="Error"></div><br/>
+
+    In what city or town does your nearest sibling live?<input type="text" class="form-control" id="security2" onblur="usecurity2validation()"/>
+    <div id="security2_failed" class="Error"></div><br/>
+
+
+      <div class="col-sm-offset col-sm-20">
+         <div class="checkbox">
+           <label>
+                   <input type="checkbox" onclick="checkboxclicked()" id="i_agree"/> I agree to the Terms of Use and Privacy Statement
+            </label>
+            <div id="div_errorsms_iagree" class="Error"></div>
+         </div>
+       </div>
+
+  <div class="btn-group">
+    <input type="submit" class="btn btn-primary" value="Sign up"/>
+    <h6><a href="new_login.html">Already a member?</a></h6>
+  </div>
+</div>
+</div>
+</div>
+
+
+  <div class= "container">
+  
+       <!-- <div class="col-sm-6 col-sm-4">Sign up with your facebook account -->
+    <div class="row">
+    <!--   <div class="col-sm-6 col-md-4">-->
+   
+            <div class="col-6 col-sm-4 col-lg-4">
+        <!-- <div class="col-xs-6 col-sm-4 sidebar-offcanvas" id="sidebar" role="navigation"> -->
+   
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<!-- footer starts -->
+<div class="mydiv navbar-default navbar-inverse">
+<div class="container" style="margin-top:50px">
+  <div class="row">
+    <div class="col-md-4 col-xs-3">
+      <ul class="footer">
+        <li class="menu2"><font class="footer2">Company</font></li><br/>
+        <li ><a href="#" class="menu2">About Groupon</a></li><br/>
+        <li ><a href="#" class="menu2">Jobs</a></li><br/>
+        <li ><a href="#" class="menu2">Blogs</a></li><br/>
+        <li ><a href="#" class="menu2">Press</a></li><br/>
+        <li ><a href="#" class="menu2">Invester Relation</a></li><br/>
+      </ul>
+    </div>
+    
+
+    <div class="col-md-4 col-xs-3">
+      <ul class="footer">
+        <li class="menu2"><font class="footer2">Work With Groupon</font></li><br/>
+        <li ><a href="#" class="menu2">Run a Groupon Deal</a></li><br/>
+        <li ><a href="#" class="menu2">Accept Groupon Payments</a></li><br/>
+        <li ><a href="#" class="menu2">Developers/API</a></li><br/>
+        <li ><a href="#" class="menu2">Affiliate Program</a></li><br/>
+        <li ><a href="#" class="menu2">Help Your Community</a></li><br/>
+      </ul>
+    </div>
+
+    <div class="col-md-4 col-xs-3">
+      <ul class="footer">
+        <li class="menu2"><font class="footer2">More</font></li><br/>
+        <li ><a href="#" class="menu2">Customers Suppoprt</a></li><br/>
+        <li ><a href="#" class="menu2">FAQ</a></li><br/>
+        <li ><a href="#" class="menu2">Coupons</a></li><br/>
+        <li ><a href="#" class="menu2">Gift Cards</a></li><br/>
+        <li ><a href="#" class="menu2">Ideel</a></li><br/>
+      </ul>
+    </div>
+    
+   
+    </div>
+
+
+  <div class="row">
+    <div class="col-xs-12">
+      <label><font class="footer2">Unbeatable Deals For Local Adventures</font></label>
+  <h5 class="menu2">GroupOn is an easy way to get huge discounts while discovering fun activities in your city.Our daily deals consists of <u><a href="#" class="menu2">restaurants</a></u>,<u><a href="#" class="menu2">spas</a></u>,<u><a href="#" class="menu2";>things to do</a></u>,<u><a href="#" class="menu2">nightlife</a></u>,<u><a href="#" class="menu2">massage</a></u>,<u><a href="#" class="menu2">hotels</a></u>, <p class="menu2">as well as health and beauty tips from our very own <u><a href="#" class="menu2">Favin The Mavin</a></u></h5></p>
+  </div>
+</div>
+</div>
+</div>
+</div>
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+  </form>
+  </body>
+</html>
+
+
+

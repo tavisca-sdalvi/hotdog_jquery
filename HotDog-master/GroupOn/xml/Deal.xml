@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mainDeal>
+<deal>
+  <category>food</category>
+  <title>Four-Course Japanese meal</title>
+  <location>Yamato Ya Japanese Restaurants</location>
+  <description></description>
+  <photo>Images/1.jpg</photo>
+  <contact_name>swap</contact_name>
+  <country>Japan</country>
+  <city>Tokyo</city>
+  <original_value>70</original_value>
+  <discount_price>40</discount_price>
+</deal>
+
+
+<deal>
+  <category>food</category>
+  <title>50% Off Spanish-Fusion Cuisine</title>
+  <location>Pepe's Turnagain House</location>
+  <description></description>
+  <photo>Images/2.jpg</photo>
+  <contact_name>swap</contact_name>
+  <country>Japan</country>
+  <city>sook</city>
+  <original_value>50</original_value>
+  <discount_price>30</discount_price>
+</deal>
+
+<deal>
+  <category>resort</category>
+  <title>Sooke Harbour Resort</title>
+  <location>Best Western Premier</location>
+  <description></description>
+  <photo>Images/3.jpg</photo>
+  <contact_name>swap</contact_name>
+  <country>Japan</country>
+  <city>sook</city>
+  <original_value>453</original_value>
+  <discount_price>259</discount_price>
+</deal>
+
+<deal>
+  <category>resort</category>
+  <title>Beginner Mosaic Class</title>
+  <location>Clay Owen Studios</location>
+  <description></description>
+  <photo>Images/6.jpg</photo>
+  <contact_name>swap</contact_name>
+  <country>Japan</country>
+  <city>Anchorage</city>
+  <original_value>100</original_value>
+  <discount_price>55</discount_price>
+</deal>
+
+</mainDeal>
