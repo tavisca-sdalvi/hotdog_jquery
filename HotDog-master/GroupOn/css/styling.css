@@ -31,3 +31,19 @@
 .contents{
 	color:black;text-decoration:none;
 }
+.margin{
+	margin-top:50px;
+}
+.width{
+	width:100%;
+}
+.height{
+	height:100%;
+	 width:60%;
+}
+.float{
+	width:40%;float:left;
+}
+.position{
+	position: relative;
+}
